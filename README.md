@@ -102,46 +102,55 @@ If you don't have the Canvas MCP, you can manually copy the syllabus, calendar, 
 
 ### Prompt
 
-> You have access to my Canvas LMS courses for the current semester. I need you to build a comprehensive weekly study plan.
+>You have access to my Canvas LMS courses for the current semester. I need you to build a comprehensive weekly study plan.
 >
-> **Instructions:**
-> 1. List all active courses and retrieve their syllabi, assignment schedules, and important dates.
-> 2. For each course, identify every deliverable (PECs, PACs, exams, quizzes, videos, projects) with its **exact due date**.
-> 3. Note that some courses describe tasks as "to be done during week X" rather than giving a hard deadline — treat the end of that week as the effective deadline.
-> 4. Cross-reference all courses to detect weeks with multiple overlapping deadlines.
-> 5. Produce a **week-by-week study plan** across all courses simultaneously, in a "what should I be working on this week" style — not isolated per course, but interleaved based on urgency and workload.
-> 6. Output the result as a **single JSON object** using the exact schema below, ready for import into my planner app.
+>Instructions:
 >
-> **JSON Schema:**
+>1. List all active courses and retrieve their assignment schedules and important dates.
+>2. For each course, identify every deliverable (PECs, PACs, exams, quizzes, videos, projects) with its exact due date AND its unlock_at date from Canvas.
+>3. Note that some courses describe tasks as "to be done during week X" rather than giving a hard deadline — treat the end of that week as the effective deadline.
+>4. Cross-reference all courses to detect weeks with multiple overlapping deadlines.
+>5. Unlock-date rule: Never schedule a task to start or work on an assignment in a week before its Canvas unlock_at date. If an assignment unlocks mid-week, it may appear that >week but
+>the task text must include (abre DD mmm) with the actual unlock date. For weeks before the unlock, replace "start/do assignment" tasks with study/reading tasks that prepare >for it
+>(e.g., "Estudiar material modulos X-Y (preparacion PEC1, abre 4 mar)").
+>6. Video submissions: These typically have very short unlock windows (3–5 days). Only place video tasks in the week they actually unlock — never earlier. Include both the >unlock and due
+>dates in the task text.
+>7. Combined tasks: When a delivery deadline and the next assignment's start fall in the same week but the new assignment isn't unlocked yet, use separate task entries — one >for the
+>delivery, one for study/preparation. Never combine "Entregar X. Empezar Y" if Y isn't unlocked yet.
+>8. Produce a week-by-week study plan across all courses simultaneously, in a "what should I be working on this week" style — not isolated per course, but interleaved based on >urgency
+>and workload.
+>9. Output the result as a single JSON object using the exact schema below, ready for import into my planner app.
 >
-> ```json
-> {
->   "semester": {
->     "name": "2025-2",
->     "label": "Semester 2025-2",
->     "startDate": "2026-02-17",
->     "endDate": "2026-06-22"
->   },
->   "weeks": {
->     "1": { "dates": "Feb 17 – 23", "title": "Semester kickoff" },
->     "2": { "dates": "Feb 24 – Mar 2", "title": "..." }
->   },
->   "tasks": [
->     { "weekNum": 1, "course": "CourseAbbr", "text": "Task description", "order": 0, "done": false }
->   ],
->   "deadlines": [
->     { "date": "2026-03-10", "label": "CourseAbbr — Deliverable name", "course": "CourseAbbr", "urgent": false, "order": 0 }
->   ]
-> }
-> ```
+>JSON Schema:
 >
-> **Rules:**
-> - Use short, consistent abbreviations for course names (e.g., `"AL"`, `"Prob"`, `"Prog"`).
-> - Dates must be in `YYYY-MM-DD` format.
-> - Each week should have 3–8 tasks covering multiple courses.
-> - Set `"urgent": true` only for deliverables with unusually short windows (≤ 3 days).
-> - Order tasks within each week by priority.
-> - The `"dates"` field should be a human-readable range (e.g., `"Mar 3 – 9"`).
+>{
+>"semester": {
+>    "name": "2025-2",
+>    "label": "Semester 2025-2",
+>    "startDate": "2026-02-17",
+>    "endDate": "2026-06-22"
+>},
+>"weeks": {
+>    "1": { "dates": "Feb 17 – 23", "title": "Semester kickoff" },
+>    "2": { "dates": "Feb 24 – Mar 2", "title": "..." }
+>},
+>"tasks": [
+>    { "weekNum": 1, "course": "CourseAbbr", "text": "Task description", "order": 0, "done": false }
+>],
+>"deadlines": [
+>    { "date": "2026-03-10", "label": "CourseAbbr — Deliverable name", "course": "CourseAbbr", "urgent": false, "order": 0 }
+>]
+>}
+>
+>Rules:
+>
+>- Use short, consistent abbreviations for course names (e.g., "AL", "Prob", "Prog").
+>- Dates must be in YYYY-MM-DD format.
+>- Each week should have 3–8 tasks covering multiple courses.
+>- Set "urgent": true only for deliverables with unusually short windows (≤ 3 days).
+>- Order tasks within each week by priority.
+>- The "dates" field should be a human-readable range (e.g., "Mar 3 – 9").
+>- Every task that references an assignment must respect its unlock_at — if locked, the task should be study/preparation only, with the unlock date noted in parentheses.
 
 ---
 
