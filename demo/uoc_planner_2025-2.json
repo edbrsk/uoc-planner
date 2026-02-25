@@ -6,935 +6,164 @@
     "endDate": "2026-06-22"
   },
   "weeks": {
-    "1": {
-      "title": "Arranque del semestre",
-      "dates": "Feb 17 – 23"
-    },
-    "2": {
-      "title": "Matrices y probabilidad condicional",
-      "dates": "Feb 24 – Mar 2"
-    },
-    "3": {
-      "title": "Preparar R1 y PEC1 Prob",
-      "dates": "Mar 3 – 9"
-    },
-    "4": {
-      "title": "Entregar R1+Q1-Q3 / Preparar PEC1 Prog+Redes",
-      "dates": "Mar 10 – 16"
-    },
-    "5": {
-      "title": "Video R1 / PEC1 Prog+Redes",
-      "dates": "Mar 17 – 23"
-    },
-    "6": {
-      "title": "Transformaciones lineales / Inicio PEC2",
-      "dates": "Mar 24 – 30"
-    },
-    "7": {
-      "title": "R2+Q4+Q5 / PEC3 Prob",
-      "dates": "Mar 31 – Abr 6"
-    },
-    "8": {
-      "title": "Video R2 / Inicio PEC4 Prob",
-      "dates": "Abr 7 – 13"
-    },
-    "9": {
-      "title": "Diagonalizacion / PEC2 Prog",
-      "dates": "Abr 14 – 20"
-    },
-    "10": {
-      "title": "PEC4 Prob / PEC2 Redes / Inicio R3",
-      "dates": "Abr 21 – 27"
-    },
-    "11": {
-      "title": "R3+Q6+Q7 / Inicio Video R3",
-      "dates": "Abr 28 – May 4"
-    },
-    "12": {
-      "title": "Video R3 / PEC5 Prob",
-      "dates": "May 5 – 11"
-    },
-    "13": {
-      "title": "PEC5 Prob / PAC3+PEC3",
-      "dates": "May 12 – 18"
-    },
-    "14": {
-      "title": "R4+Q8+Q9 / PEC6 Prob / Video R4",
-      "dates": "May 19 – 25"
-    },
-    "15": {
-      "title": "Video R4 / PEC6 Prob / Prep Sintesis",
-      "dates": "May 26 – Jun 1"
-    },
-    "16": {
-      "title": "PEC Sintesis Prob (solo 5-7 jun!)",
-      "dates": "Jun 2 – 8"
-    },
-    "17": {
-      "title": "R5+Q10+Q11 / PEC4 Prog+Redes",
-      "dates": "Jun 9 – 15"
-    },
-    "18": {
-      "title": "Video R5 / Repaso final",
-      "dates": "Jun 16 – 22"
-    }
+    "1": { "title": "Arranque del semestre", "dates": "Feb 17 – 23" },
+    "2": { "title": "Matrices y probabilidad condicional", "dates": "Feb 24 – Mar 2" },
+    "3": { "title": "PEC1 Prob abre / Preparar R1", "dates": "Mar 3 – 9" },
+    "4": { "title": "Entregar R1+Q1-Q3 / Preparar PEC1 Prog+Redes", "dates": "Mar 10 – 16" },
+    "5": { "title": "Video R1 / PEC1 Prog+Redes / PEC2 Prob abre", "dates": "Mar 17 – 23" },
+    "6": { "title": "PEC3 Prob abre / Transformaciones lineales", "dates": "Mar 24 – 30" },
+    "7": { "title": "R2+Q4+Q5 / PEC3 Prob / PEC2 Prog abre", "dates": "Mar 31 – Abr 6" },
+    "8": { "title": "Video R2 / PEC2 Prog", "dates": "Abr 7 – 13" },
+    "9": { "title": "PEC4 Prob abre / Entregar PEC2 Prog", "dates": "Abr 14 – 20" },
+    "10": { "title": "Entregar PEC4 Prob + PEC2 Redes", "dates": "Abr 21 – 27" },
+    "11": { "title": "R3+Q6+Q7 / PAC3 Prog abre / PEC3 Redes abre", "dates": "Abr 28 – May 4" },
+    "12": { "title": "Video R3 / PEC5 Prob abre", "dates": "May 5 – 11" },
+    "13": { "title": "Entregar PEC5 Prob + PAC3 + PEC3 Redes / PEC6 abre", "dates": "May 12 – 18" },
+    "14": { "title": "R4+Q8+Q9 / PEC6 Prob", "dates": "May 19 – 25" },
+    "15": { "title": "Video R4 / Entregar PEC6 Prob / PEC4 Prog abre", "dates": "May 26 – Jun 1" },
+    "16": { "title": "PEC Sintesis Prob (solo 5-7 jun!)", "dates": "Jun 2 – 8" },
+    "17": { "title": "R5+Q10+Q11 / PEC4 Prog+Redes", "dates": "Jun 9 – 15" },
+    "18": { "title": "Video R5 / Repaso final", "dates": "Jun 16 – 22" }
   },
   "tasks": [
-    {
-      "weekNum": 1,
-      "course": "Prob",
-      "text": "Leer Unidades 1-2 (Espacio muestral, sucesos)",
-      "order": 2,
-      "done": false
-    },
-    {
-      "weekNum": 1,
-      "course": "Lab",
-      "text": "Configurar entornos R y Python",
-      "order": 6,
-      "done": true
-    },
-    {
-      "weekNum": 5,
-      "course": "Redes",
-      "text": "Entregar PEC1 Redes el 20 mar",
-      "order": 4,
-      "done": false
-    },
-    {
-      "weekNum": 3,
-      "course": "AL",
-      "text": "Preparar Reto 1 (R1 — 15 pts, entrega: 13 mar)",
-      "order": 1,
-      "done": false
-    },
-    {
-      "weekNum": 1,
-      "course": "Redes",
-      "text": "Leer Unidad 1 — Introduccion a redes",
-      "order": 5,
-      "done": false
-    },
-    {
-      "weekNum": 2,
-      "course": "Prob",
-      "text": "Leer Unidad 3 — Probabilidad condicionada",
-      "order": 2,
-      "done": false
-    },
-    {
-      "weekNum": 2,
-      "course": "AL",
-      "text": "Leer Cap.2 — Matrices y determinantes",
-      "order": 0,
-      "done": false
-    },
-    {
-      "weekNum": 16,
-      "course": "Prob",
-      "text": "PEC Sintesis: disponible solo 5-7 jun. No perder la ventana!",
-      "order": 1,
-      "done": false
-    },
-    {
-      "weekNum": 11,
-      "course": "AL",
-      "text": "Leer Cap.6 — Formas cuadraticas",
-      "order": 2,
-      "done": false
-    },
-    {
-      "weekNum": 8,
-      "course": "Prob",
-      "text": "Confirmar entrega PEC3 (7 abr). Empezar PEC4 (entrega: 21 abr)",
-      "order": 2,
-      "done": false
-    },
-    {
-      "weekNum": 10,
-      "course": "Prob",
-      "text": "Entregar PEC4 el 21 abr. Empezar PEC5 (entrega: 12 may)",
-      "order": 1,
-      "done": false
-    },
-    {
-      "weekNum": 2,
-      "course": "AL",
-      "text": "Hacer Cuestionario 2 (Q2) — entrega: 13 mar",
-      "order": 1,
-      "done": false
-    },
-    {
-      "weekNum": 11,
-      "course": "Prob",
-      "text": "Continuar PEC5 — variables aleatorias",
-      "order": 3,
-      "done": false
-    },
-    {
-      "weekNum": 18,
-      "course": "Lab",
-      "text": "Repaso lab — revisar practicas y conclusiones",
-      "order": 5,
-      "done": false
-    },
-    {
-      "weekNum": 9,
-      "course": "Redes",
-      "text": "Continuar PEC2 (entrega: 24 abr)",
-      "order": 4,
-      "done": false
-    },
-    {
-      "weekNum": 13,
-      "course": "Prob",
-      "text": "Entregar PEC5 el 12 may. Empezar PEC6 (video, min 80%, entrega: 26 may)",
-      "order": 1,
-      "done": false
-    },
-    {
-      "weekNum": 3,
-      "course": "Prob",
-      "text": "Empezar PEC2 (entrega: 24 mar)",
-      "order": 4,
-      "done": false
-    },
-    {
-      "weekNum": 18,
-      "course": "AL",
-      "text": "Repaso general AL — repasar Retos y cuestionarios",
-      "order": 1,
-      "done": false
-    },
-    {
-      "weekNum": 18,
-      "course": "Prob",
-      "text": "Repaso final Probabilidad",
-      "order": 2,
-      "done": false
-    },
-    {
-      "weekNum": 4,
-      "course": "Redes",
-      "text": "Preparar PEC1 (20 pts, entrega: 20 mar)",
-      "order": 5,
-      "done": false
-    },
-    {
-      "weekNum": 3,
-      "course": "Redes",
-      "text": "Leer Unidad 3 — Capa de enlace",
-      "order": 6,
-      "done": false
-    },
-    {
-      "weekNum": 16,
-      "course": "Prog",
-      "text": "Finalizar PEC4 (entrega: 12 jun)",
-      "order": 2,
-      "done": false
-    },
-    {
-      "weekNum": 13,
-      "course": "Redes",
-      "text": "Entregar PEC3 el 15 may. Empezar PEC4 (20 pts, entrega: 12 jun)",
-      "order": 3,
-      "done": false
-    },
-    {
-      "weekNum": 9,
-      "course": "Lab",
-      "text": "Practica lab 2 — inferencia estadistica",
-      "order": 5,
-      "done": false
-    },
-    {
-      "weekNum": 4,
-      "course": "Prob",
-      "text": "Confirmar entrega PEC1 (10 mar)",
-      "order": 2,
-      "done": false
-    },
-    {
-      "weekNum": 9,
-      "course": "AL",
-      "text": "Preparar Q6 y Q7 (entrega: 1 may)",
-      "order": 1,
-      "done": false
-    },
-    {
-      "weekNum": 13,
-      "course": "AL",
-      "text": "Continuar preparacion R4 + Q8+Q9",
-      "order": 0,
-      "done": false
-    },
-    {
-      "weekNum": 5,
-      "course": "Prog",
-      "text": "Entregar PEC1 Prog el 20 mar",
-      "order": 3,
-      "done": false
-    },
-    {
-      "weekNum": 6,
-      "course": "AL",
-      "text": "Leer Cap.4 — Transformaciones lineales",
-      "order": 0,
-      "done": false
-    },
-    {
-      "weekNum": 4,
-      "course": "Redes",
-      "text": "Leer Unidad 4 — Capa de red",
-      "order": 6,
-      "done": false
-    },
-    {
-      "weekNum": 7,
-      "course": "AL",
-      "text": "Entregar Reto 2 + Q4+Q5 antes del 3 abr",
-      "order": 0,
-      "done": false
-    },
-    {
-      "weekNum": 1,
-      "course": "Prob",
-      "text": "Empezar ejercicios PEC1 (entrega: 10 mar)",
-      "order": 3,
-      "done": false
-    },
-    {
-      "weekNum": 10,
-      "course": "AL",
-      "text": "Preparar Reto 3 (R3 — 20 pts, entrega: 1 may)",
-      "order": 0,
-      "done": false
-    },
-    {
-      "weekNum": 7,
-      "course": "Prog",
-      "text": "Continuar PEC2 — ejercicios cap.4",
-      "order": 3,
-      "done": false
-    },
-    {
-      "weekNum": 4,
-      "course": "AL",
-      "text": "Grabar Video identidad Reto 1 (entrega: 23 mar)",
-      "order": 1,
-      "done": false
-    },
-    {
-      "weekNum": 8,
-      "course": "Redes",
-      "text": "Continuar PEC2 (entrega: 24 abr)",
-      "order": 4,
-      "done": false
-    },
-    {
-      "weekNum": 6,
-      "course": "Prob",
-      "text": "Empezar PEC3 (incluye video, R min 80%, entrega: 7 abr)",
-      "order": 3,
-      "done": false
-    },
-    {
-      "weekNum": 17,
-      "course": "Prog",
-      "text": "Entregar PEC4 Prog el 12 jun",
-      "order": 2,
-      "done": false
-    },
-    {
-      "weekNum": 5,
-      "course": "AL",
-      "text": "Subir Video identidad Reto 1 antes del 23 mar",
-      "order": 0,
-      "done": false
-    },
-    {
-      "weekNum": 1,
-      "course": "AL",
-      "text": "Hacer Cuestionario 1 (Q1) — entrega: 13 mar",
-      "order": 1,
-      "done": true
-    },
-    {
-      "weekNum": 17,
-      "course": "AL",
-      "text": "Entregar Reto 5 + Q10+Q11 antes del 12 jun",
-      "order": 0,
-      "done": false
-    },
-    {
-      "weekNum": 1,
-      "course": "AL",
-      "text": "Leer Cap.1 — Sistemas de ecuaciones lineales",
-      "order": 0,
-      "done": true
-    },
-    {
-      "weekNum": 15,
-      "course": "AL",
-      "text": "Empezar material R5 + Q10+Q11 (entrega: 12 jun)",
-      "order": 1,
-      "done": false
-    },
-    {
-      "weekNum": 7,
-      "course": "Prob",
-      "text": "Finalizar y entregar PEC3 antes del 7 abr (incluye video!)",
-      "order": 2,
-      "done": false
-    },
-    {
-      "weekNum": 15,
-      "course": "Prob",
-      "text": "Preparar PEC Sintesis (SOLO 2 dias: 5-7 jun)",
-      "order": 3,
-      "done": false
-    },
-    {
-      "weekNum": 16,
-      "course": "AL",
-      "text": "Finalizar preparacion R5 + Q10+Q11 (entrega: 12 jun)",
-      "order": 0,
-      "done": false
-    },
-    {
-      "weekNum": 16,
-      "course": "Redes",
-      "text": "Finalizar PEC4 (entrega: 12 jun)",
-      "order": 3,
-      "done": false
-    },
-    {
-      "weekNum": 3,
-      "course": "AL",
-      "text": "Leer Cap.3 — Espacios vectoriales",
-      "order": 0,
-      "done": false
-    },
-    {
-      "weekNum": 12,
-      "course": "Prob",
-      "text": "Finalizar PEC5 (entrega: 12 may)",
-      "order": 2,
-      "done": false
-    },
-    {
-      "weekNum": 17,
-      "course": "Redes",
-      "text": "Entregar PEC4 Redes el 12 jun",
-      "order": 3,
-      "done": false
-    },
-    {
-      "weekNum": 15,
-      "course": "Prog",
-      "text": "Continuar PEC4 (entrega: 12 jun)",
-      "order": 4,
-      "done": false
-    },
-    {
-      "weekNum": 8,
-      "course": "AL",
-      "text": "Leer Cap.5 — Valores y vectores propios",
-      "order": 1,
-      "done": false
-    },
-    {
-      "weekNum": 18,
-      "course": "Redes",
-      "text": "Repaso final Redes",
-      "order": 4,
-      "done": false
-    },
-    {
-      "weekNum": 3,
-      "course": "Prog",
-      "text": "Leer Cap.3 — Estructuras de control",
-      "order": 5,
-      "done": false
-    },
-    {
-      "weekNum": 15,
-      "course": "Prob",
-      "text": "Entregar PEC6 el 26 may (requiere video!)",
-      "order": 2,
-      "done": false
-    },
-    {
-      "weekNum": 17,
-      "course": "AL",
-      "text": "Grabar Video identidad Reto 5 (entrega: 22 jun)",
-      "order": 1,
-      "done": false
-    },
-    {
-      "weekNum": 12,
-      "course": "AL",
-      "text": "Empezar material R4 + Q8+Q9 (entrega: 22 may)",
-      "order": 1,
-      "done": false
-    },
-    {
-      "weekNum": 4,
-      "course": "AL",
-      "text": "Entregar Reto 1 + Q1+Q2+Q3 antes del 13 mar",
-      "order": 0,
-      "done": false
-    },
-    {
-      "weekNum": 3,
-      "course": "AL",
-      "text": "Hacer Cuestionario 3 (Q3) — entrega: 13 mar",
-      "order": 2,
-      "done": false
-    },
-    {
-      "weekNum": 12,
-      "course": "Lab",
-      "text": "Practica lab 3 — regresion y correlacion",
-      "order": 5,
-      "done": false
-    },
-    {
-      "weekNum": 12,
-      "course": "Prog",
-      "text": "Continuar PAC3 (entrega: 15 may)",
-      "order": 3,
-      "done": false
-    },
-    {
-      "weekNum": 2,
-      "course": "Prob",
-      "text": "Continuar ejercicios PEC1 (entrega: 10 mar)",
-      "order": 3,
-      "done": false
-    },
-    {
-      "weekNum": 9,
-      "course": "Prob",
-      "text": "Finalizar PEC4 (entrega: 21 abr)",
-      "order": 2,
-      "done": false
-    },
-    {
-      "weekNum": 5,
-      "course": "Prob",
-      "text": "Finalizar y entregar PEC2 antes del 24 mar",
-      "order": 2,
-      "done": false
-    },
-    {
-      "weekNum": 11,
-      "course": "Redes",
-      "text": "Continuar PEC3",
-      "order": 5,
-      "done": false
-    },
-    {
-      "weekNum": 6,
-      "course": "Redes",
-      "text": "Leer Unidad 5 — Capa de transporte. Empezar PEC2 (30 pts, entrega: 24 abr)",
-      "order": 5,
-      "done": false
-    },
-    {
-      "weekNum": 12,
-      "course": "AL",
-      "text": "Subir Video identidad Reto 3 antes del 11 may",
-      "order": 0,
-      "done": false
-    },
-    {
-      "weekNum": 6,
-      "course": "Prob",
-      "text": "Confirmar entrega PEC2 (24 mar)",
-      "order": 2,
-      "done": false
-    },
-    {
-      "weekNum": 18,
-      "course": "Prog",
-      "text": "Repaso final Programacion",
-      "order": 3,
-      "done": false
-    },
-    {
-      "weekNum": 14,
-      "course": "AL",
-      "text": "Grabar Video identidad Reto 4 (entrega: 1 jun)",
-      "order": 1,
-      "done": false
-    },
-    {
-      "weekNum": 11,
-      "course": "Prog",
-      "text": "Continuar PAC3",
-      "order": 4,
-      "done": false
-    },
-    {
-      "weekNum": 11,
-      "course": "AL",
-      "text": "Entregar Reto 3 + Q6+Q7 antes del 1 may",
-      "order": 0,
-      "done": false
-    },
-    {
-      "weekNum": 11,
-      "course": "AL",
-      "text": "Grabar Video identidad Reto 3 (entrega: 11 may)",
-      "order": 1,
-      "done": false
-    },
-    {
-      "weekNum": 5,
-      "course": "Lab",
-      "text": "Practica lab 1 — distribuciones de probabilidad",
-      "order": 5,
-      "done": false
-    },
-    {
-      "weekNum": 6,
-      "course": "Prog",
-      "text": "Leer Cap.4 — Funciones y modulos. Empezar PEC2 (25 pts, entrega: 17 abr)",
-      "order": 4,
-      "done": false
-    },
-    {
-      "weekNum": 1,
-      "course": "Prog",
-      "text": "Configurar entorno Python y leer Cap.1",
-      "order": 4,
-      "done": true
-    },
-    {
-      "weekNum": 13,
-      "course": "Prog",
-      "text": "Entregar PAC3 el 15 may",
-      "order": 2,
-      "done": false
-    },
-    {
-      "weekNum": 8,
-      "course": "AL",
-      "text": "Subir Video identidad Reto 2 antes del 13 abr",
-      "order": 0,
-      "done": false
-    },
-    {
-      "weekNum": 14,
-      "course": "Prob",
-      "text": "Avanzar en PEC6 (incluye video!, entrega: 26 may)",
-      "order": 2,
-      "done": false
-    },
-    {
-      "weekNum": 2,
-      "course": "Lab",
-      "text": "Ejercicios basicos de exploracion de datos en R",
-      "order": 6,
-      "done": false
-    },
-    {
-      "weekNum": 4,
-      "course": "Prog",
-      "text": "Preparar PEC1 (20 pts, entrega: 20 mar)",
-      "order": 4,
-      "done": false
-    },
-    {
-      "weekNum": 8,
-      "course": "Prog",
-      "text": "Continuar y finalizar PEC2 (entrega: 17 abr)",
-      "order": 3,
-      "done": false
-    },
-    {
-      "weekNum": 7,
-      "course": "Redes",
-      "text": "Continuar PEC2 — ejercicios transporte",
-      "order": 4,
-      "done": false
-    },
-    {
-      "weekNum": 15,
-      "course": "AL",
-      "text": "Subir Video identidad Reto 4 antes del 1 jun",
-      "order": 0,
-      "done": false
-    },
-    {
-      "weekNum": 14,
-      "course": "AL",
-      "text": "Entregar Reto 4 + Q8+Q9 antes del 22 may",
-      "order": 0,
-      "done": false
-    },
-    {
-      "weekNum": 5,
-      "course": "AL",
-      "text": "Empezar material R2 (Cap.4 Transformaciones lineales)",
-      "order": 1,
-      "done": false
-    },
-    {
-      "weekNum": 10,
-      "course": "Redes",
-      "text": "Entregar PEC2 el 24 abr. Empezar PEC3 (30 pts, entrega: 15 may)",
-      "order": 3,
-      "done": false
-    },
-    {
-      "weekNum": 9,
-      "course": "AL",
-      "text": "Leer Cap.5 — Diagonalizacion de matrices",
-      "order": 0,
-      "done": false
-    },
-    {
-      "weekNum": 18,
-      "course": "AL",
-      "text": "Subir Video identidad Reto 5 antes del 22 jun",
-      "order": 0,
-      "done": false
-    },
-    {
-      "weekNum": 7,
-      "course": "AL",
-      "text": "Grabar Video identidad Reto 2 (entrega: 13 abr)",
-      "order": 1,
-      "done": false
-    },
-    {
-      "weekNum": 12,
-      "course": "Redes",
-      "text": "Continuar PEC3 (entrega: 15 may)",
-      "order": 4,
-      "done": false
-    },
-    {
-      "weekNum": 3,
-      "course": "Prob",
-      "text": "Finalizar y entregar PEC1 antes del 10 mar",
-      "order": 3,
-      "done": false
-    },
-    {
-      "weekNum": 4,
-      "course": "Prob",
-      "text": "Avanzar en PEC2 (entrega: 24 mar)",
-      "order": 3,
-      "done": false
-    },
-    {
-      "weekNum": 14,
-      "course": "Prog",
-      "text": "Empezar PEC4 (30 pts, entrega: 12 jun)",
-      "order": 3,
-      "done": false
-    },
-    {
-      "weekNum": 15,
-      "course": "Redes",
-      "text": "Continuar PEC4 (entrega: 12 jun)",
-      "order": 5,
-      "done": false
-    },
-    {
-      "weekNum": 9,
-      "course": "Prog",
-      "text": "Entregar PEC2 el 17 abr",
-      "order": 3,
-      "done": false
-    },
-    {
-      "weekNum": 6,
-      "course": "AL",
-      "text": "Preparar Q4 y Q5 (entrega: 3 abr)",
-      "order": 1,
-      "done": false
-    },
-    {
-      "weekNum": 10,
-      "course": "Prog",
-      "text": "Leer Cap.5 — POO. Empezar PAC3 (25 pts, entrega: 15 may)",
-      "order": 2,
-      "done": false
-    },
-    {
-      "weekNum": 14,
-      "course": "Redes",
-      "text": "Continuar PEC4 (entrega: 12 jun)",
-      "order": 4,
-      "done": false
-    },
-    {
-      "weekNum": 2,
-      "course": "Redes",
-      "text": "Leer Unidad 2 — Capa fisica",
-      "order": 5,
-      "done": false
-    },
-    {
-      "weekNum": 2,
-      "course": "Prog",
-      "text": "Leer Cap.2 — Variables y tipos de datos",
-      "order": 4,
-      "done": false
-    }
+    { "weekNum": 1, "course": "AL", "text": "Leer Cap.1 — Sistemas de ecuaciones lineales", "order": 0, "done": true },
+    { "weekNum": 1, "course": "AL", "text": "Hacer Cuestionario 1 (Q1) — entrega: 13 mar", "order": 1, "done": true },
+    { "weekNum": 1, "course": "Prob", "text": "Leer Unidades 1-2 (Espacio muestral, sucesos)", "order": 2, "done": false },
+    { "weekNum": 1, "course": "Prob", "text": "Estudiar material modulos 1-2 (preparacion PEC1, abre 4 mar)", "order": 3, "done": false },
+    { "weekNum": 1, "course": "Prog", "text": "Configurar entorno Python y leer Cap.1", "order": 4, "done": true },
+    { "weekNum": 1, "course": "Redes", "text": "Leer Unidad 1 — Introduccion a redes", "order": 5, "done": false },
+    { "weekNum": 1, "course": "Lab", "text": "Configurar entornos R y Python", "order": 6, "done": true },
+
+    { "weekNum": 2, "course": "AL", "text": "Leer Cap.2 — Matrices y determinantes", "order": 0, "done": false },
+    { "weekNum": 2, "course": "AL", "text": "Hacer Cuestionario 2 (Q2) — entrega: 13 mar", "order": 1, "done": false },
+    { "weekNum": 2, "course": "Prob", "text": "Leer Unidad 3 — Probabilidad condicionada", "order": 2, "done": false },
+    { "weekNum": 2, "course": "Prob", "text": "Resolver ejercicios del libro modulos 1-3 (preparacion PEC1, abre 4 mar)", "order": 3, "done": false },
+    { "weekNum": 2, "course": "Prog", "text": "Leer Cap.2 — Variables y tipos de datos", "order": 4, "done": false },
+    { "weekNum": 2, "course": "Redes", "text": "Leer Unidad 2 — Capa fisica", "order": 5, "done": false },
+    { "weekNum": 2, "course": "Lab", "text": "Ejercicios basicos de exploracion de datos en R", "order": 6, "done": false },
+
+    { "weekNum": 3, "course": "AL", "text": "Leer Cap.3 — Espacios vectoriales", "order": 0, "done": false },
+    { "weekNum": 3, "course": "AL", "text": "Preparar Reto 1 (R1 — 15 pts, entrega: 13 mar)", "order": 1, "done": false },
+    { "weekNum": 3, "course": "AL", "text": "Hacer Cuestionario 3 (Q3) — entrega: 13 mar", "order": 2, "done": false },
+    { "weekNum": 3, "course": "Prob", "text": "Hacer PEC1: cuestionario + parte R (abre 4 mar, entrega: 10 mar)", "order": 3, "done": false },
+    { "weekNum": 3, "course": "Prob", "text": "Estudiar Unidad 4 — Variables aleatorias discretas", "order": 4, "done": false },
+    { "weekNum": 3, "course": "Prog", "text": "Leer Cap.3 — Estructuras de control", "order": 5, "done": false },
+    { "weekNum": 3, "course": "Redes", "text": "Leer Unidad 3 — Capa de enlace", "order": 6, "done": false },
+
+    { "weekNum": 4, "course": "AL", "text": "Entregar Reto 1 + Q1+Q2+Q3 antes del 13 mar", "order": 0, "done": false },
+    { "weekNum": 4, "course": "Prob", "text": "Confirmar entrega PEC1 (10 mar)", "order": 1, "done": false },
+    { "weekNum": 4, "course": "Prob", "text": "Estudiar modulos 4-5 (preparacion PEC2, abre 18 mar)", "order": 2, "done": false },
+    { "weekNum": 4, "course": "Prog", "text": "Preparar PEC1 Prog (20 pts, abre 2 mar, entrega: 20 mar)", "order": 3, "done": false },
+    { "weekNum": 4, "course": "Redes", "text": "Preparar PEC1 Redes (20 pts, abre 28 feb, entrega: 20 mar)", "order": 4, "done": false },
+    { "weekNum": 4, "course": "Redes", "text": "Leer Unidad 4 — Capa de red", "order": 5, "done": false },
+
+    { "weekNum": 5, "course": "AL", "text": "Subir Video identidad Reto 1 (abre 20 mar, entrega: 23 mar)", "order": 0, "done": false },
+    { "weekNum": 5, "course": "AL", "text": "Empezar material R2 (Cap.4 Transformaciones lineales)", "order": 1, "done": false },
+    { "weekNum": 5, "course": "Prob", "text": "Hacer PEC2: cuestionario + parte R (abre 18 mar, entrega: 24 mar)", "order": 2, "done": false },
+    { "weekNum": 5, "course": "Prog", "text": "Entregar PEC1 Prog el 20 mar", "order": 3, "done": false },
+    { "weekNum": 5, "course": "Redes", "text": "Entregar PEC1 Redes el 20 mar", "order": 4, "done": false },
+    { "weekNum": 5, "course": "Lab", "text": "Practica lab 1 — distribuciones de probabilidad", "order": 5, "done": false },
+
+    { "weekNum": 6, "course": "AL", "text": "Leer Cap.4 — Transformaciones lineales", "order": 0, "done": false },
+    { "weekNum": 6, "course": "AL", "text": "Preparar Q4 y Q5 (entrega: 3 abr)", "order": 1, "done": false },
+    { "weekNum": 6, "course": "Prob", "text": "Confirmar entrega PEC2 (24 mar)", "order": 2, "done": false },
+    { "weekNum": 6, "course": "Prob", "text": "Empezar PEC3: cuestionario + parte R + video (abre 25 mar, entrega: 7 abr, R min 80%)", "order": 3, "done": false },
+    { "weekNum": 6, "course": "Prog", "text": "Leer Cap.4 — Funciones y modulos", "order": 4, "done": false },
+    { "weekNum": 6, "course": "Redes", "text": "Leer Unidad 5 — Capa de transporte. Continuar PEC2 Redes (abierta, entrega: 24 abr)", "order": 5, "done": false },
+
+    { "weekNum": 7, "course": "AL", "text": "Entregar Reto 2 + Q4+Q5 antes del 3 abr", "order": 0, "done": false },
+    { "weekNum": 7, "course": "Prob", "text": "Finalizar y entregar PEC3 antes del 7 abr (incluye video!)", "order": 1, "done": false },
+    { "weekNum": 7, "course": "Prog", "text": "Empezar PEC2 Prog (25 pts, abre 30 mar, entrega: 17 abr)", "order": 2, "done": false },
+    { "weekNum": 7, "course": "Redes", "text": "Continuar PEC2 Redes — ejercicios transporte", "order": 3, "done": false },
+
+    { "weekNum": 8, "course": "AL", "text": "Subir Video identidad Reto 2 (abre 10 abr, entrega: 13 abr)", "order": 0, "done": false },
+    { "weekNum": 8, "course": "AL", "text": "Leer Cap.5 — Valores y vectores propios", "order": 1, "done": false },
+    { "weekNum": 8, "course": "Prob", "text": "Confirmar entrega PEC3 (7 abr). Estudiar material modulo 6", "order": 2, "done": false },
+    { "weekNum": 8, "course": "Prog", "text": "Continuar y finalizar PEC2 Prog (entrega: 17 abr)", "order": 3, "done": false },
+    { "weekNum": 8, "course": "Redes", "text": "Continuar PEC2 Redes (entrega: 24 abr)", "order": 4, "done": false },
+
+    { "weekNum": 9, "course": "AL", "text": "Leer Cap.5 — Diagonalizacion de matrices", "order": 0, "done": false },
+    { "weekNum": 9, "course": "AL", "text": "Preparar Q6 y Q7 (entrega: 1 may)", "order": 1, "done": false },
+    { "weekNum": 9, "course": "Prob", "text": "Hacer PEC4: cuestionario + parte R (abre 15 abr, entrega: 21 abr)", "order": 2, "done": false },
+    { "weekNum": 9, "course": "Prog", "text": "Entregar PEC2 Prog el 17 abr", "order": 3, "done": false },
+    { "weekNum": 9, "course": "Redes", "text": "Continuar PEC2 Redes (entrega: 24 abr)", "order": 4, "done": false },
+    { "weekNum": 9, "course": "Lab", "text": "Practica lab 2 — inferencia estadistica", "order": 5, "done": false },
+
+    { "weekNum": 10, "course": "AL", "text": "Preparar Reto 3 (R3 — 20 pts, entrega: 1 may)", "order": 0, "done": false },
+    { "weekNum": 10, "course": "Prob", "text": "Entregar PEC4 el 21 abr", "order": 1, "done": false },
+    { "weekNum": 10, "course": "Prob", "text": "Estudiar material modulos 7-8 (preparacion PEC5, abre 6 may)", "order": 2, "done": false },
+    { "weekNum": 10, "course": "Prog", "text": "Leer Cap.5 — POO basica", "order": 3, "done": false },
+    { "weekNum": 10, "course": "Redes", "text": "Entregar PEC2 Redes el 24 abr", "order": 4, "done": false },
+
+    { "weekNum": 11, "course": "AL", "text": "Entregar Reto 3 + Q6+Q7 antes del 1 may", "order": 0, "done": false },
+    { "weekNum": 11, "course": "AL", "text": "Leer Cap.6 — Formas cuadraticas", "order": 1, "done": false },
+    { "weekNum": 11, "course": "Prob", "text": "Estudiar material avanzado (preparacion PEC5, abre 6 may)", "order": 2, "done": false },
+    { "weekNum": 11, "course": "Prog", "text": "Empezar PAC3 (25 pts, abre 27 abr, entrega: 15 may)", "order": 3, "done": false },
+    { "weekNum": 11, "course": "Redes", "text": "Empezar PEC3 Redes (30 pts, abre 25 abr, entrega: 15 may)", "order": 4, "done": false },
+
+    { "weekNum": 12, "course": "AL", "text": "Subir Video identidad Reto 3 (abre 8 may, entrega: 11 may)", "order": 0, "done": false },
+    { "weekNum": 12, "course": "AL", "text": "Empezar material R4 + Q8+Q9 (entrega: 22 may)", "order": 1, "done": false },
+    { "weekNum": 12, "course": "Prob", "text": "Hacer PEC5: cuestionario + parte R (abre 6 may, entrega: 12 may)", "order": 2, "done": false },
+    { "weekNum": 12, "course": "Prog", "text": "Continuar PAC3 (entrega: 15 may)", "order": 3, "done": false },
+    { "weekNum": 12, "course": "Redes", "text": "Continuar PEC3 Redes (entrega: 15 may)", "order": 4, "done": false },
+    { "weekNum": 12, "course": "Lab", "text": "Practica lab 3 — regresion y correlacion", "order": 5, "done": false },
+
+    { "weekNum": 13, "course": "AL", "text": "Continuar preparacion R4 + Q8+Q9", "order": 0, "done": false },
+    { "weekNum": 13, "course": "Prob", "text": "Entregar PEC5 el 12 may", "order": 1, "done": false },
+    { "weekNum": 13, "course": "Prob", "text": "Empezar PEC6: cuestionario + parte R + video (abre 13 may, entrega: 26 may, R min 80%)", "order": 2, "done": false },
+    { "weekNum": 13, "course": "Prog", "text": "Entregar PAC3 el 15 may", "order": 3, "done": false },
+    { "weekNum": 13, "course": "Redes", "text": "Entregar PEC3 Redes el 15 may", "order": 4, "done": false },
+    { "weekNum": 13, "course": "Redes", "text": "Empezar PEC4 Redes (20 pts, abre 16 may, entrega: 12 jun)", "order": 5, "done": false },
+
+    { "weekNum": 14, "course": "AL", "text": "Entregar Reto 4 + Q8+Q9 antes del 22 may", "order": 0, "done": false },
+    { "weekNum": 14, "course": "Prob", "text": "Avanzar en PEC6 (incluye video!, entrega: 26 may)", "order": 1, "done": false },
+    { "weekNum": 14, "course": "Prog", "text": "Estudiar material Cap.6 (preparacion PEC4, abre 25 may)", "order": 2, "done": false },
+    { "weekNum": 14, "course": "Redes", "text": "Continuar PEC4 Redes (entrega: 12 jun)", "order": 3, "done": false },
+
+    { "weekNum": 15, "course": "AL", "text": "Subir Video identidad Reto 4 (abre 29 may, entrega: 1 jun)", "order": 0, "done": false },
+    { "weekNum": 15, "course": "AL", "text": "Empezar material R5 + Q10+Q11 (entrega: 12 jun)", "order": 1, "done": false },
+    { "weekNum": 15, "course": "Prob", "text": "Entregar PEC6 el 26 may (requiere video!)", "order": 2, "done": false },
+    { "weekNum": 15, "course": "Prob", "text": "Repasar todo el material de Prob (preparacion PEC Sintesis, abre 5 jun)", "order": 3, "done": false },
+    { "weekNum": 15, "course": "Prog", "text": "Empezar PEC4 Prog (30 pts, abre 25 may, entrega: 12 jun)", "order": 4, "done": false },
+    { "weekNum": 15, "course": "Redes", "text": "Continuar PEC4 Redes (entrega: 12 jun)", "order": 5, "done": false },
+
+    { "weekNum": 16, "course": "AL", "text": "Finalizar preparacion R5 + Q10+Q11 (entrega: 12 jun)", "order": 0, "done": false },
+    { "weekNum": 16, "course": "Prob", "text": "PEC Sintesis: disponible solo 5-7 jun. No perder la ventana!", "order": 1, "done": false },
+    { "weekNum": 16, "course": "Prog", "text": "Continuar PEC4 Prog (entrega: 12 jun)", "order": 2, "done": false },
+    { "weekNum": 16, "course": "Redes", "text": "Finalizar PEC4 Redes (entrega: 12 jun)", "order": 3, "done": false },
+
+    { "weekNum": 17, "course": "AL", "text": "Entregar Reto 5 + Q10+Q11 antes del 12 jun", "order": 0, "done": false },
+    { "weekNum": 17, "course": "Prog", "text": "Entregar PEC4 Prog el 12 jun", "order": 1, "done": false },
+    { "weekNum": 17, "course": "Redes", "text": "Entregar PEC4 Redes el 12 jun", "order": 2, "done": false },
+
+    { "weekNum": 18, "course": "AL", "text": "Subir Video identidad Reto 5 (abre 19 jun, entrega: 22 jun)", "order": 0, "done": false },
+    { "weekNum": 18, "course": "AL", "text": "Repaso general AL — repasar Retos y cuestionarios", "order": 1, "done": false },
+    { "weekNum": 18, "course": "Prob", "text": "Repaso final Probabilidad", "order": 2, "done": false },
+    { "weekNum": 18, "course": "Prog", "text": "Repaso final Programacion", "order": 3, "done": false },
+    { "weekNum": 18, "course": "Redes", "text": "Repaso final Redes", "order": 4, "done": false },
+    { "weekNum": 18, "course": "Lab", "text": "Repaso lab — revisar practicas y conclusiones", "order": 5, "done": false }
   ],
   "deadlines": [
-    {
-      "date": "2026-04-17",
-      "label": "Prog — PEC2 (25 pts)",
-      "course": "Prog",
-      "urgent": false,
-      "order": 8
-    },
-    {
-      "date": "2026-03-24",
-      "label": "Prob — PEC2 (Cuestionario + Reto)",
-      "course": "Prob",
-      "urgent": false,
-      "order": 4
-    },
-    {
-      "date": "2026-05-15",
-      "label": "Redes — PEC3 (30 pts) + Prog — PAC3 (25 pts)",
-      "course": "Redes",
-      "urgent": false,
-      "order": 14
-    },
-    {
-      "date": "2026-06-07",
-      "label": "Prob — PEC Sintesis (SOLO 2 dias: Jun 5-7)",
-      "course": "Prob",
-      "urgent": false,
-      "order": 18
-    },
-    {
-      "date": "2026-06-01",
-      "label": "AL — Video identidad Reto 4",
-      "course": "AL",
-      "urgent": false,
-      "order": 17
-    },
-    {
-      "date": "2026-03-23",
-      "label": "AL — Video identidad Reto 1",
-      "course": "AL",
-      "urgent": false,
-      "order": 3
-    },
-    {
-      "date": "2026-04-24",
-      "label": "Redes — PEC2 (30 pts)",
-      "course": "Redes",
-      "urgent": false,
-      "order": 10
-    },
-    {
-      "date": "2026-04-21",
-      "label": "Prob — PEC4 (Cuestionario + Reto)",
-      "course": "Prob",
-      "urgent": false,
-      "order": 9
-    },
-    {
-      "date": "2026-04-13",
-      "label": "AL — Video identidad Reto 2",
-      "course": "AL",
-      "urgent": false,
-      "order": 7
-    },
-    {
-      "date": "2026-03-13",
-      "label": "AL — Reto 1 (15 pts) + Q1+Q2+Q3",
-      "course": "AL",
-      "urgent": false,
-      "order": 1
-    },
-    {
-      "date": "2026-05-12",
-      "label": "Prob — PEC5 (Cuestionario + Reto)",
-      "course": "Prob",
-      "urgent": false,
-      "order": 13
-    },
-    {
-      "date": "2026-05-01",
-      "label": "AL — Reto 3 (20 pts) + Q6+Q7",
-      "course": "AL",
-      "urgent": false,
-      "order": 11
-    },
-    {
-      "date": "2026-05-11",
-      "label": "AL — Video identidad Reto 3",
-      "course": "AL",
-      "urgent": false,
-      "order": 12
-    },
-    {
-      "date": "2026-05-22",
-      "label": "AL — Reto 4 (20 pts) + Q8+Q9",
-      "course": "AL",
-      "urgent": false,
-      "order": 15
-    },
-    {
-      "date": "2026-04-03",
-      "label": "AL — Reto 2 (15 pts) + Q4+Q5",
-      "course": "AL",
-      "urgent": false,
-      "order": 5
-    },
-    {
-      "date": "2026-03-10",
-      "label": "Prob — PEC1 (Cuestionario + Reto)",
-      "course": "Prob",
-      "urgent": false,
-      "order": 0
-    },
-    {
-      "date": "2026-04-07",
-      "label": "Prob — PEC3 (Cuestionario + Reto + Video, min 80%)",
-      "course": "Prob",
-      "urgent": false,
-      "order": 6
-    },
-    {
-      "date": "2026-06-12",
-      "label": "AL — Reto 5 + Q10+Q11 + Redes PEC4 + Prog PEC4",
-      "course": "AL",
-      "urgent": false,
-      "order": 19
-    },
-    {
-      "date": "2026-06-22",
-      "label": "AL — Video identidad Reto 5",
-      "course": "AL",
-      "urgent": false,
-      "order": 20
-    },
-    {
-      "date": "2026-05-26",
-      "label": "Prob — PEC6 (Cuestionario + Reto + Video, min 80%)",
-      "course": "Prob",
-      "urgent": false,
-      "order": 16
-    },
-    {
-      "date": "2026-03-20",
-      "label": "Redes — PEC1 (20 pts) + Prog — PEC1 (20 pts)",
-      "course": "Redes",
-      "urgent": false,
-      "order": 2
-    }
+    { "date": "2026-03-10", "label": "Prob — PEC1 (Cuestionario + Reto)", "course": "Prob", "urgent": false, "order": 0 },
+    { "date": "2026-03-13", "label": "AL — Reto 1 (15 pts) + Q1+Q2+Q3", "course": "AL", "urgent": false, "order": 1 },
+    { "date": "2026-03-20", "label": "Redes — PEC1 (20 pts) + Prog — PEC1 (20 pts)", "course": "Redes", "urgent": false, "order": 2 },
+    { "date": "2026-03-23", "label": "AL — Video identidad Reto 1", "course": "AL", "urgent": false, "order": 3 },
+    { "date": "2026-03-24", "label": "Prob — PEC2 (Cuestionario + Reto)", "course": "Prob", "urgent": false, "order": 4 },
+    { "date": "2026-04-03", "label": "AL — Reto 2 (15 pts) + Q4+Q5", "course": "AL", "urgent": false, "order": 5 },
+    { "date": "2026-04-07", "label": "Prob — PEC3 (Cuestionario + Reto + Video, min 80%)", "course": "Prob", "urgent": false, "order": 6 },
+    { "date": "2026-04-13", "label": "AL — Video identidad Reto 2", "course": "AL", "urgent": false, "order": 7 },
+    { "date": "2026-04-17", "label": "Prog — PEC2 (25 pts)", "course": "Prog", "urgent": false, "order": 8 },
+    { "date": "2026-04-21", "label": "Prob — PEC4 (Cuestionario + Reto)", "course": "Prob", "urgent": false, "order": 9 },
+    { "date": "2026-04-24", "label": "Redes — PEC2 (30 pts)", "course": "Redes", "urgent": false, "order": 10 },
+    { "date": "2026-05-01", "label": "AL — Reto 3 (20 pts) + Q6+Q7", "course": "AL", "urgent": false, "order": 11 },
+    { "date": "2026-05-11", "label": "AL — Video identidad Reto 3", "course": "AL", "urgent": false, "order": 12 },
+    { "date": "2026-05-12", "label": "Prob — PEC5 (Cuestionario + Reto)", "course": "Prob", "urgent": false, "order": 13 },
+    { "date": "2026-05-15", "label": "Redes — PEC3 (30 pts) + Prog — PAC3 (25 pts)", "course": "Redes", "urgent": false, "order": 14 },
+    { "date": "2026-05-22", "label": "AL — Reto 4 (20 pts) + Q8+Q9", "course": "AL", "urgent": false, "order": 15 },
+    { "date": "2026-05-26", "label": "Prob — PEC6 (Cuestionario + Reto + Video, min 80%)", "course": "Prob", "urgent": false, "order": 16 },
+    { "date": "2026-06-01", "label": "AL — Video identidad Reto 4", "course": "AL", "urgent": false, "order": 17 },
+    { "date": "2026-06-07", "label": "Prob — PEC Sintesis (SOLO 2 dias: Jun 5-7)", "course": "Prob", "urgent": true, "order": 18 },
+    { "date": "2026-06-12", "label": "AL — Reto 5 + Q10+Q11 + Redes PEC4 + Prog PEC4", "course": "AL", "urgent": false, "order": 19 },
+    { "date": "2026-06-22", "label": "AL — Video identidad Reto 5", "course": "AL", "urgent": false, "order": 20 }
   ]
 }
