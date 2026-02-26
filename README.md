@@ -137,9 +137,12 @@ If you don't have the Canvas MCP, you can manually copy the syllabus, calendar, 
 >"tasks": [
 >    { "weekNum": 1, "course": "CourseAbbr", "text": "Task description", "order": 0, "done": false }
 >],
->"deadlines": [
->    { "date": "2026-03-10", "label": "CourseAbbr — Deliverable name", "course": "CourseAbbr", "urgent": false, "order": 0 }
->]
+>   "deadlines": [
+>       { "date": "2026-03-10", "label": "CourseAbbr — Deliverable name", "course": "CourseAbbr", "urgent": false, "order": 0 }
+>   ],
+>   "notes": [
+>       { "taskId": "reference_to_task_or_leave_empty", "text": "Any extra notes for this task" }
+>   ]
 >}
 >
 >Rules:
@@ -195,6 +198,8 @@ This means you can: generate data with AI → import → modify in the app → e
 | `deadlines[].course` | `string` | Course abbreviation |
 | `deadlines[].urgent` | `boolean` | `true` for extremely short submission windows |
 | `deadlines[].order` | `number` | Display order |
+| `notes[].taskId` | `string` | ID of the task this note belongs to (optional on import if mapped during generation) |
+| `notes[].text` | `string` | The note content |
 
 ---
 

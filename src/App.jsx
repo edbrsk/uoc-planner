@@ -7,6 +7,7 @@ import { useAuth } from './hooks/useAuth';
 import { useSemesters } from './hooks/useSemesters';
 import { useTasks } from './hooks/useTasks';
 import { useDeadlines } from './hooks/useDeadlines';
+import { useNotes } from './hooks/useNotes';
 import { useToast, ToastProvider } from './components/Toast';
 import AuthScreen from './components/AuthScreen';
 import SetupScreen from './components/SetupScreen';
@@ -17,6 +18,7 @@ import WeekCard from './components/WeekCard';
 import TaskModal from './components/TaskModal';
 import DeadlineModal from './components/DeadlineModal';
 import ImportModal from './components/ImportModal';
+import NotesPanel from './components/NotesPanel';
 import RoadmapView from './components/RoadmapView';
 import { SemesterModal, WeekModal } from './components/SemesterModal';
 
@@ -25,11 +27,13 @@ function AppContent() {
   const { semesters, current, currentId, loading: semLoading, switchSemester, createSemester, deleteSemester, reload } = useSemesters(user?.uid);
   const { tasks, toggleTask, saveTask, removeTask } = useTasks(user?.uid, currentId);
   const { deadlines, saveDeadline, removeDeadline } = useDeadlines(user?.uid, currentId);
+  const { notes, saveNote, removeNote, taskIdsWithNotes } = useNotes(user?.uid, currentId);
   const showToast = useToast();
 
   const [filter, setFilter] = useState('All');
   const [modal, setModal] = useState(null);
   const [showRoadmap, setShowRoadmap] = useState(false);
+  const [activeNotesTask, setActiveNotesTask] = useState(null);
   const weeksRef = useRef(null);
 
   // Derived data
@@ -110,6 +114,13 @@ function AppContent() {
         await addDoc(dlCol, dl);
       }
 
+      if (data.notes) {
+        const notesCol = col(semRef, 'notes');
+        for (const n of data.notes) {
+          await addDoc(notesCol, { ...n, createdAt: serverTimestamp() });
+        }
+      }
+
       toast('✅ Semestre importado: ' + (data.semester.label || semName));
     } catch (err) {
       console.error(err);
@@ -128,8 +139,13 @@ function AppContent() {
         endDate: current.endDate || '',
       },
       weeks: current.weeks || {},
-      tasks: tasks.map(({ id, ...t }) => ({ weekNum: t.weekNum, course: t.course, text: t.text, order: t.order ?? 0, done: !!t.done })),
+      tasks: tasks.map(({ id, ...t }, i) => ({ id: `task_${i}`, weekNum: t.weekNum, course: t.course, text: t.text, order: t.order ?? 0, done: !!t.done })),
       deadlines: deadlines.map(({ id, ...d }) => ({ date: d.date, label: d.label, course: d.course, urgent: !!d.urgent, order: d.order ?? 0 })),
+      notes: notes.map(({ id, createdAt, ...n }) => ({
+        ...n,
+        // map absolute taskId to the pseudo relative ids generated during export
+        taskId: `task_${tasks.findIndex(t => t.id === n.taskId)}`
+      })).filter(n => !n.taskId.endsWith('-1')) // exclude if orphaned
     };
     const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
@@ -328,7 +344,9 @@ function AppContent() {
                   onDeleteTask={handleDeleteTask}
                   onAddTask={num => setModal({ type: 'task', weekNum: num })}
                   onEditWeek={num => setModal({ type: 'week', weekNum: num, week: current.weeks[num] })}
-                  onDeleteWeek={removeWeek} />
+                  onDeleteWeek={removeWeek}
+                  onOpenNotes={task => setActiveNotesTask(task)}
+                  taskIdsWithNotes={taskIdsWithNotes} />
               </div>
             );
           })}
@@ -386,6 +404,27 @@ function AppContent() {
 
       {showRoadmap && (
         <RoadmapView deadlines={deadlines} tasks={tasks} weeks={weeks} onClose={() => setShowRoadmap(false)} />
+      )}
+      {activeNotesTask && (
+        <NotesPanel
+          task={activeNotesTask}
+          notes={notes.filter(n => n.taskId === activeNotesTask.id)}
+          onSave={async (taskId, text) => {
+            try {
+              await saveNote(taskId, text);
+            } catch (err) {
+              showToast('Error al guardar nota: ' + err.message, 'error');
+            }
+          }}
+          onDelete={async (noteId) => {
+            try {
+              await removeNote(noteId);
+            } catch (err) {
+              showToast('Error al eliminar nota: ' + err.message, 'error');
+            }
+          }}
+          onClose={() => setActiveNotesTask(null)}
+        />
       )}
     </div>
   );

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import TaskItem from './TaskItem';
 import { weekDatesLabel } from '../lib/constants';
 
-export default function WeekCard({ week, tasks, isCurrent, onToggleTask, onEditTask, onDeleteTask, onAddTask, onEditWeek, onDeleteWeek }) {
+export default function WeekCard({ week, tasks, isCurrent, onToggleTask, onEditTask, onDeleteTask, onAddTask, onEditWeek, onDeleteWeek, onOpenNotes, taskIdsWithNotes }) {
     const [collapsed, setCollapsed] = useState(!isCurrent);
     const done = tasks.filter(t => t.done).length;
     const total = tasks.length;
@@ -43,7 +43,7 @@ export default function WeekCard({ week, tasks, isCurrent, onToggleTask, onEditT
                         {tasks.length > 0 ? (
                             <ul className="space-y-0.5">
                                 {tasks.map(t => (
-                                    <TaskItem key={t.id} task={t} onToggle={onToggleTask} onEdit={onEditTask} onDelete={onDeleteTask} />
+                                    <TaskItem key={t.id} task={t} onToggle={onToggleTask} onEdit={onEditTask} onDelete={onDeleteTask} hasNotes={taskIdsWithNotes?.has(t.id)} onOpenNotes={onOpenNotes} />
                                 ))}
                             </ul>
                         ) : (

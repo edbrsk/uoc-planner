@@ -169,13 +169,65 @@ export function offlineDeleteDeadline(semId, dlId) {
     saveStore(store);
 }
 
+// ── Notes ──
+
+export function offlineGetNotes(semId) {
+    const store = getStore();
+    return (store.semesters[semId]?.notes || []).map(n => ({ ...n }));
+}
+
+export function offlineAddNote(semId, note) {
+    const store = getStore();
+    if (!store.semesters[semId]) return null;
+    if (!store.semesters[semId].notes) store.semesters[semId].notes = [];
+    const id = genId();
+    store.semesters[semId].notes.push({ id, ...note, createdAt: new Date().toISOString() });
+    saveStore(store);
+    return id;
+}
+
+export function offlineUpdateNote(semId, noteId, updates) {
+    const store = getStore();
+    const notes = store.semesters[semId]?.notes;
+    if (!notes) return;
+    const idx = notes.findIndex(n => n.id === noteId);
+    if (idx >= 0) Object.assign(notes[idx], updates);
+    saveStore(store);
+}
+
+export function offlineDeleteNote(semId, noteId) {
+    const store = getStore();
+    const sem = store.semesters[semId];
+    if (!sem) return;
+    sem.notes = (sem.notes || []).filter(n => n.id !== noteId);
+    saveStore(store);
+}
+
 // ── Import (creates a full semester from JSON) ──
 
 export function offlineImportSemester(data) {
     const store = getStore();
     const id = genId();
-    const tasks = (data.tasks || []).map(t => ({ id: genId(), ...t, done: t.done || false }));
+
+    // Map imported task IDs to newly generated actual task IDs so notes can be linked properly if specified
+    const taskMap = {};
+    const tasks = (data.tasks || []).map((t, idx) => {
+        const newId = genId();
+        // Fallback to array index if t.id isn't present
+        const oldId = t.id || `task_${idx}`;
+        taskMap[oldId] = newId;
+        return { id: newId, ...t, done: t.done || false };
+    });
+
     const deadlines = (data.deadlines || []).map(d => ({ id: genId(), ...d }));
+
+    const notes = (data.notes || []).map(n => ({
+        id: genId(),
+        taskId: taskMap[n.taskId] || tasks[0]?.id, // map or fallback to first task
+        text: n.text,
+        createdAt: new Date().toISOString()
+    }));
+
     store.semesters[id] = {
         name: data.semester.name,
         label: data.semester.label || ('Semestre ' + data.semester.name),
@@ -184,6 +236,7 @@ export function offlineImportSemester(data) {
         weeks: data.weeks || {},
         tasks,
         deadlines,
+        notes,
         createdAt: new Date().toISOString(),
     };
     store.lastSemId = id;
