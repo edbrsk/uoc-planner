@@ -4,7 +4,7 @@ import Modal from './Modal';
 const EXAMPLE_HINT = `{
   "semester": { "name": "2025-2", "label": "...", "startDate": "2026-02-17", "endDate": "..." },
   "weeks": { "1": { "dates": "Feb 17 – 23", "title": "..." }, ... },
-  "tasks": [ { "weekNum": 1, "course": "AL", "text": "...", "order": 0, "done": false } ],
+  "tasks": [ { "weekNum": 1, "course": "AL", "text": "...", "order": 0, "done": false, "url": "https://..." } ],
   "deadlines": [ { "date": "2026-03-10", "label": "...", "course": "Prob", "urgent": false, "order": 0 } ]
 }`;
 

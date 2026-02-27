@@ -1,12 +1,10 @@
 # 📚 UOC Planner
 
+![Weekly planner view](demo/uoc_planner.gif)
+
 A weekly planner for [UOC](https://www.uoc.edu) (Universitat Oberta de Catalunya) students. Visualize your courses, deadlines, and weekly tasks in a modern interface with a full semester roadmap.
 
 Developed by Edgar [@edbrsk](https://github.com/edbrsk/)
-
-![Weekly planner view](demo/planner.png)
-
-![Roadmap swimlane view](demo/roadmap.png)
 
 ## ✨ Features
 
@@ -102,58 +100,158 @@ If you don't have the Canvas MCP, you can manually copy the syllabus, calendar, 
 
 ### Prompt
 
->You have access to my Canvas LMS courses for the current semester. I need you to build a comprehensive weekly study plan.
+>  You have access to my Canvas LMS courses for the current semester using the mcp-canvas-lms.
+>  Build a comprehensive weekly study plan following ALL the rules below exactly.
 >
->Instructions:
+>  STEP 1 — COURSE DISCOVERY:
 >
->1. List all active courses and retrieve their assignment schedules and important dates.
->2. For each course, identify every deliverable (PECs, PACs, exams, quizzes, videos, projects) with its exact due date AND its unlock_at date from Canvas.
->3. Note that some courses describe tasks as "to be done during week X" rather than giving a hard deadline — treat the end of that week as the effective deadline.
->4. Cross-reference all courses to detect weeks with multiple overlapping deadlines.
->5. Unlock-date rule: Never schedule a task to start or work on an assignment in a week before its Canvas unlock_at date. If an assignment unlocks mid-week, it may appear that >week but
->the task text must include (abre DD mmm) with the actual unlock date. For weeks before the unlock, replace "start/do assignment" tasks with study/reading tasks that prepare >for it
->(e.g., "Estudiar material modulos X-Y (preparacion PEC1, abre 4 mar)").
->6. Video submissions: These typically have very short unlock windows (3–5 days). Only place video tasks in the week they actually unlock — never earlier. Include both the >unlock and due
->dates in the task text.
->7. Combined tasks: When a delivery deadline and the next assignment's start fall in the same week but the new assignment isn't unlocked yet, use separate task entries — one >for the
->delivery, one for study/preparation. Never combine "Entregar X. Empezar Y" if Y isn't unlocked yet.
->8. Produce a week-by-week study plan across all courses simultaneously, in a "what should I be working on this week" style — not isolated per course, but interleaved based on >urgency
->and workload.
->9. Output the result as a single JSON object using the exact schema below, ready for import into my planner app.
+>  • Use canvas_list_courses to find all active courses for the current semester term.
+>    Ignore any courses from previous terms (check enrollment_term_id).
+>  • For each active course, call canvas_list_assignments and capture for every assignment:
+>    name, due_at, unlock_at, html_url, submission_types, points_possible.
 >
->JSON Schema:
 >
->{
->"semester": {
->    "name": "2025-2",
->    "label": "Semester 2025-2",
->    "startDate": "2026-02-17",
->    "endDate": "2026-06-22"
->},
->"weeks": {
->    "1": { "dates": "Feb 17 – 23", "title": "Semester kickoff" },
->    "2": { "dates": "Feb 24 – Mar 2", "title": "..." }
->},
->"tasks": [
->    { "weekNum": 1, "course": "CourseAbbr", "text": "Task description", "order": 0, "done": false }
->],
->   "deadlines": [
->       { "date": "2026-03-10", "label": "CourseAbbr — Deliverable name", "course": "CourseAbbr", "urgent": false, "order": 0 }
->   ],
->   "notes": [
->       { "taskId": "reference_to_task_or_leave_empty", "text": "Any extra notes for this task" }
->   ]
->}
+>  STEP 2 — TIMEZONE CONVERSION (CRITICAL):
 >
->Rules:
+>  Canvas stores all timestamps in UTC. My timezone is Spain:
+>    • CET  = UTC+1  → applies before the last Sunday of March
+>    • CEST = UTC+2  → applies from the last Sunday of March onward
+>    For 2026: CET before March 29; CEST from March 29 onward.
 >
->- Use short, consistent abbreviations for course names (e.g., "AL", "Prob", "Prog").
->- Dates must be in YYYY-MM-DD format.
->- Each week should have 3–8 tasks covering multiple courses.
->- Set "urgent": true only for deliverables with unusually short windows (≤ 3 days).
->- Order tasks within each week by priority.
->- The "dates" field should be a human-readable range (e.g., "Mar 3 – 9").
->- Every task that references an assignment must respect its unlock_at — if locked, the task should be study/preparation only, with the unlock date noted in parentheses.
+>  Convert EVERY unlock_at and due_at to Spain local time before using them > anywhere.
+>  Key rule: an unlock_at of 23:00 UTC on day D becomes 00:00 local time on > day D+1.
+>    → Display as "abre D+1 mmm", never "abre D mmm".
+>  Example: unlock_at 2026-03-19T23:00:00Z → 2026-03-20 00:00 CET → "abre 20 mar"
+>
+>
+>  STEP 3 — UNLOCK-DATE RULE:
+>
+>  • Never schedule a task to start working on an assignment before its unlock_at
+>    (converted to Spain local time).
+>  • For weeks before unlock: use study/reading preparation tasks instead, with
+>    "(preparacion NombreTarea, abre DD mmm)" in the task text.
+>  • If an assignment unlocks mid-week: it may appear in that week with "(abre DD mmm)".
+>
+>  STEP 4 — TASK GRANULARITY (CRITICAL):
+>
+>  • ONE task per deliverable per week. Never merge multiple separate deliverables
+>    into a single task.
+>    ✗ WRONG: "Hacer Q1, Q2, Q3 y empezar R1 (vencen 13 mar)"
+>    ✓ RIGHT: Three separate tasks — Q1 in week 1, Q2 in week 2, Q3 in week 3
+>
+>  • For courses with weekly cuestionarios (e.g., AL), place exactly ONE cuestionario
+>    per week following the course's intended weekly schedule, even if they all share
+>    the same final deadline.
+>
+>  • Reading/study tasks must also be split per chapter or unit, one per week,
+>    mirroring the course's own weekly structure.
+>
+>  • For each Reto in AL: create separate tasks for (1) reading/preparation,
+>    (2) Preparar Reto, (3) Entregar Reto, and (4) Subir Video — each in its own week.
+>
+>
+>  STEP 5 — VIDEO SUBMISSION TASKS:
+>
+>  • Video submissions have very short unlock windows (3–5 days).
+>    Place video tasks ONLY in the week they actually unlock — never earlier.
+>  • Task text format: "Subir Video Reto 1 (abre 20 mar, entrega: 23 mar)"
+>  • Set "urgent": true for video deadlines with ≤ 3 days window.
+>
+>
+>  STEP 6 — COMBINED TASK RULE:
+>
+>  When a deadline and the start of the next assignment fall in the same week but the
+>  new assignment is still locked: create two separate entries — one for the delivery,
+>  one for study/preparation. Never write "Entregar X. Empezar Y" if Y is not yet unlocked.
+>
+>
+>  STEP 7 — WEEK-BY-WEEK PLAN:
+>
+>  • Cover all active courses simultaneously, interleaved by urgency and workload.
+>  • Each week: 3–8 tasks across multiple courses.
+>  • Within each week, order tasks by priority (most urgent / closest deadline first).
+>  • Use these course abbreviations exactly: AL, Prob, Prog, Redes, Lab
+>    (not "LabPyR" or any other variant).
+>
+>
+>  STEP 8 — CANVAS URLs:
+>
+>  • For every task that maps to a specific Canvas assignment, include:
+>    "url": <html_url from canvas_get_assignment>
+>  • For generic study/preparation tasks with no direct Canvas assignment,
+>    omit the "url" field entirely. Do not include null or empty strings.
+>
+>
+>  STEP 9 — NOTES AND taskId (CRITICAL):
+>
+>  The "tasks" array is 0-indexed. The taskId in each note must be "task_N" where N
+>  is the 0-BASED position of that task in the tasks array.
+>    → tasks[0] = "task_0", tasks[1] = "task_1", tasks[38] = "task_38", etc.
+>
+>  NEVER use an empty string "", null, or undefined for taskId.
+>  Every note must be linked to a specific task — for general/calendar notes, choose
+>  the most relevant task (e.g., the delivery task it warns about).
+>
+>  Before writing the final JSON: verify each note's taskId by counting the 0-based
+>  position of the intended task in the tasks array and confirm the text at that
+>  index matches your intent.
+>
+>  STEP 10 — SELF-VERIFICATION BEFORE OUTPUT:
+>
+>  Before writing the final JSON, run these checks:
+>  1. All unlock_at dates have been converted to Spain local time (CET/CEST).
+>  2. No task appears in a week before its unlock date.
+>  3. No week has merged cuestionarios that should be separate weekly tasks.
+>  4. Every note's taskId resolves to tasks[N] where tasks[N].text matches
+>     what the note is referring to.
+>  5. No taskId uses "", null, or a non-existent index.
+>
+>  
+>  OUTPUT SCHEMA (exact — do not deviate):
+>
+>  {
+>    "semester": {
+>      "name": "2025-2",
+>      "label": "Semestre 2025-2",
+>      "startDate": "2026-02-17",
+>      "endDate": "2026-06-22"
+>    },
+>    "weeks": {
+>      "1": { "dates": "17 feb – 23 feb", "title": "Arranque del semestre" }
+>    },
+>    "tasks": [
+>      {
+>        "weekNum": 1,
+>        "course": "AL",
+>        "text": "Hacer Cuestionario 1 (Q1) — entrega: 13 mar",
+>        "order": 0,
+>        "done": false,
+>        "url": "https://aula.uoc.edu/courses/..."
+>      }
+>    ],
+>    "deadlines": [
+>      {
+>        "date": "2026-03-13",
+>        "label": "AL — Reto 1 + Q1+Q2+Q3",
+>        "course": "AL",
+>        "urgent": false,
+>        "order": 0
+>      }
+>    ],
+>    "notes": [
+>      {
+>        "taskId": "task_3",
+>        "text": "Note text — taskId is the 0-based index of the task in the tasks array."
+>      }
+>    ]
+>  }
+>
+>  Additional output rules:
+>  • All dates in YYYY-MM-DD format.
+>  • "urgent": true only for deliverables with ≤ 3 days between unlock and due date.
+>  • "done": false for all tasks.
+>  • tasks array ordered chronologically (weekNum ASC, then order ASC within each week).
+>  • Output only the raw JSON — no markdown code fences, no explanations.
 
 ---
 
@@ -193,6 +291,7 @@ This means you can: generate data with AI → import → modify in the app → e
 | `tasks[].text` | `string` | Task description |
 | `tasks[].order` | `number` | Sort order within the week (0, 1, 2...) |
 | `tasks[].done` | `boolean` | Completion status — default `false` |
+| `tasks[].url` | `string` _(optional)_ | Direct Canvas URL to the assignment/quiz (`html_url` from Canvas API) |
 | `deadlines[].date` | `string` | Due date in `YYYY-MM-DD` format |
 | `deadlines[].label` | `string` | Deliverable description |
 | `deadlines[].course` | `string` | Course abbreviation |

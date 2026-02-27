@@ -9,7 +9,9 @@ export default function TaskItem({ task, onToggle, onEdit, onDelete, hasNotes, o
                 className="mt-0.5 flex-shrink-0 w-4 h-4 rounded accent-violet-600 cursor-pointer" />
             <span className={`flex-1 text-sm leading-snug select-none ${task.done ? 'line-through opacity-40' : ''}`}>
                 <span className={`inline-block px-1.5 py-0.5 rounded text-xs font-medium mr-1.5 ${c.badge}`}>{task.course}</span>
-                {task.text}
+                {task.url
+                    ? <a href={task.url} target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-violet-600 transition-colors">{task.text}</a>
+                    : task.text}
             </span>
             <span className={`flex items-center gap-1 flex-shrink-0 transition-opacity ${hasNotes ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}>
                 <button onClick={() => onOpenNotes(task)} className="relative text-slate-400 hover:text-blue-500 p-1 text-sm cursor-pointer" title="Notas">

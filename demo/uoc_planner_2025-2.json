@@ -82,51 +82,68 @@
   "tasks": [
     {
       "weekNum": 1,
+      "course": "Prob",
+      "text": "Cuestionario inicial (vence 22 feb)",
+      "order": 0,
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/76567/assignments/862669"
+    },
+    {
+      "weekNum": 1,
+      "course": "Prob",
+      "text": "Introduccion a RStudio — practica no evaluada (vence 22 feb)",
+      "order": 1,
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/76567/assignments/826814"
+    },
+    {
+      "weekNum": 1,
       "course": "AL",
       "text": "Leer Cap.1 — Sistemas de ecuaciones lineales",
-      "order": 0,
+      "order": 2,
       "done": true
     },
     {
       "weekNum": 1,
       "course": "AL",
       "text": "Hacer Cuestionario 1 (Q1) — entrega: 13 mar",
-      "order": 1,
-      "done": true
+      "order": 3,
+      "done": true,
+      "url": "https://aula.uoc.edu/courses/80582/assignments/858839"
     },
     {
       "weekNum": 1,
       "course": "Prob",
       "text": "Leer Unidades 1-2 (Espacio muestral, sucesos)",
-      "order": 2,
+      "order": 4,
       "done": false
     },
     {
       "weekNum": 1,
       "course": "Prob",
       "text": "Estudiar material modulos 1-2 (preparacion PEC1, abre 4 mar)",
-      "order": 3,
+      "order": 5,
       "done": false
     },
     {
       "weekNum": 1,
       "course": "Prog",
       "text": "Configurar entorno Python y leer Cap.1",
-      "order": 4,
+      "order": 6,
       "done": true
     },
     {
       "weekNum": 1,
       "course": "Redes",
       "text": "Leer Unidad 1 — Introduccion a redes",
-      "order": 5,
+      "order": 7,
       "done": false
     },
     {
       "weekNum": 1,
       "course": "Lab",
       "text": "Configurar entornos R y Python",
-      "order": 6,
+      "order": 8,
       "done": true
     },
     {
@@ -141,7 +158,8 @@
       "course": "AL",
       "text": "Hacer Cuestionario 2 (Q2) — entrega: 13 mar",
       "order": 1,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80582/assignments/858854"
     },
     {
       "weekNum": 2,
@@ -190,21 +208,24 @@
       "course": "AL",
       "text": "Preparar Reto 1 (R1 — 15 pts, entrega: 13 mar)",
       "order": 1,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80582/assignments/858893"
     },
     {
       "weekNum": 3,
       "course": "AL",
       "text": "Hacer Cuestionario 3 (Q3) — entrega: 13 mar",
       "order": 2,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80582/assignments/858859"
     },
     {
       "weekNum": 3,
       "course": "Prob",
       "text": "Hacer PEC1: cuestionario + parte R (abre 4 mar, entrega: 10 mar)",
       "order": 3,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/76567/assignments/862658"
     },
     {
       "weekNum": 3,
@@ -232,14 +253,16 @@
       "course": "AL",
       "text": "Entregar Reto 1 + Q1+Q2+Q3 antes del 13 mar",
       "order": 0,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80582/assignments/858893"
     },
     {
       "weekNum": 4,
       "course": "Prob",
       "text": "Confirmar entrega PEC1 (10 mar)",
       "order": 1,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/76567/assignments/821535"
     },
     {
       "weekNum": 4,
@@ -253,14 +276,16 @@
       "course": "Prog",
       "text": "Preparar PEC1 Prog (20 pts, abre 2 mar, entrega: 20 mar)",
       "order": 3,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/81156/assignments/867718"
     },
     {
       "weekNum": 4,
       "course": "Redes",
       "text": "Preparar PEC1 Redes (20 pts, abre 28 feb, entrega: 20 mar)",
       "order": 4,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80216/assignments/850051"
     },
     {
       "weekNum": 4,
@@ -274,7 +299,8 @@
       "course": "AL",
       "text": "Subir Video identidad Reto 1 (abre 20 mar, entrega: 23 mar)",
       "order": 0,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80582/assignments/873128"
     },
     {
       "weekNum": 5,
@@ -288,21 +314,24 @@
       "course": "Prob",
       "text": "Hacer PEC2: cuestionario + parte R (abre 18 mar, entrega: 24 mar)",
       "order": 2,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/76567/assignments/862656"
     },
     {
       "weekNum": 5,
       "course": "Prog",
       "text": "Entregar PEC1 Prog el 20 mar",
       "order": 3,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/81156/assignments/867718"
     },
     {
       "weekNum": 5,
       "course": "Redes",
       "text": "Entregar PEC1 Redes el 20 mar",
       "order": 4,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80216/assignments/850051"
     },
     {
       "weekNum": 5,
@@ -323,21 +352,24 @@
       "course": "AL",
       "text": "Preparar Q4 y Q5 (entrega: 3 abr)",
       "order": 1,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80582/assignments/858866"
     },
     {
       "weekNum": 6,
       "course": "Prob",
       "text": "Confirmar entrega PEC2 (24 mar)",
       "order": 2,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/76567/assignments/821538"
     },
     {
       "weekNum": 6,
       "course": "Prob",
       "text": "Empezar PEC3: cuestionario + parte R + video (abre 25 mar, entrega: 7 abr, R min 80%)",
       "order": 3,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/76567/assignments/862660"
     },
     {
       "weekNum": 6,
@@ -351,42 +383,48 @@
       "course": "Redes",
       "text": "Leer Unidad 5 — Capa de transporte. Continuar PEC2 Redes (abierta, entrega: 24 abr)",
       "order": 5,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80216/assignments/850055"
     },
     {
       "weekNum": 7,
       "course": "AL",
       "text": "Entregar Reto 2 + Q4+Q5 antes del 3 abr",
       "order": 0,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80582/assignments/858898"
     },
     {
       "weekNum": 7,
       "course": "Prob",
       "text": "Finalizar y entregar PEC3 antes del 7 abr (incluye video!)",
       "order": 1,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/76567/assignments/826806"
     },
     {
       "weekNum": 7,
       "course": "Prog",
       "text": "Empezar PEC2 Prog (25 pts, abre 30 mar, entrega: 17 abr)",
       "order": 2,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/81156/assignments/867728"
     },
     {
       "weekNum": 7,
       "course": "Redes",
       "text": "Continuar PEC2 Redes — ejercicios transporte",
       "order": 3,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80216/assignments/850055"
     },
     {
       "weekNum": 8,
       "course": "AL",
       "text": "Subir Video identidad Reto 2 (abre 10 abr, entrega: 13 abr)",
       "order": 0,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80582/assignments/873134"
     },
     {
       "weekNum": 8,
@@ -400,21 +438,24 @@
       "course": "Prob",
       "text": "Confirmar entrega PEC3 (7 abr). Estudiar material modulo 6",
       "order": 2,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/76567/assignments/826806"
     },
     {
       "weekNum": 8,
       "course": "Prog",
       "text": "Continuar y finalizar PEC2 Prog (entrega: 17 abr)",
       "order": 3,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/81156/assignments/867728"
     },
     {
       "weekNum": 8,
       "course": "Redes",
       "text": "Continuar PEC2 Redes (entrega: 24 abr)",
       "order": 4,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80216/assignments/850055"
     },
     {
       "weekNum": 9,
@@ -428,28 +469,32 @@
       "course": "AL",
       "text": "Preparar Q6 y Q7 (entrega: 1 may)",
       "order": 1,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80582/assignments/858875"
     },
     {
       "weekNum": 9,
       "course": "Prob",
       "text": "Hacer PEC4: cuestionario + parte R (abre 15 abr, entrega: 21 abr)",
       "order": 2,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/76567/assignments/862662"
     },
     {
       "weekNum": 9,
       "course": "Prog",
       "text": "Entregar PEC2 Prog el 17 abr",
       "order": 3,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/81156/assignments/867728"
     },
     {
       "weekNum": 9,
       "course": "Redes",
       "text": "Continuar PEC2 Redes (entrega: 24 abr)",
       "order": 4,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80216/assignments/850055"
     },
     {
       "weekNum": 9,
@@ -463,14 +508,16 @@
       "course": "AL",
       "text": "Preparar Reto 3 (R3 — 20 pts, entrega: 1 may)",
       "order": 0,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80582/assignments/858905"
     },
     {
       "weekNum": 10,
       "course": "Prob",
       "text": "Entregar PEC4 el 21 abr",
       "order": 1,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/76567/assignments/821541"
     },
     {
       "weekNum": 10,
@@ -491,14 +538,16 @@
       "course": "Redes",
       "text": "Entregar PEC2 Redes el 24 abr",
       "order": 4,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80216/assignments/850055"
     },
     {
       "weekNum": 11,
       "course": "AL",
       "text": "Entregar Reto 3 + Q6+Q7 antes del 1 may",
       "order": 0,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80582/assignments/858905"
     },
     {
       "weekNum": 11,
@@ -519,49 +568,56 @@
       "course": "Prog",
       "text": "Empezar PAC3 (25 pts, abre 27 abr, entrega: 15 may)",
       "order": 3,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/81156/assignments/867706"
     },
     {
       "weekNum": 11,
       "course": "Redes",
       "text": "Empezar PEC3 Redes (30 pts, abre 25 abr, entrega: 15 may)",
       "order": 4,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80216/assignments/850060"
     },
     {
       "weekNum": 12,
       "course": "AL",
       "text": "Subir Video identidad Reto 3 (abre 8 may, entrega: 11 may)",
       "order": 0,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80582/assignments/873138"
     },
     {
       "weekNum": 12,
       "course": "AL",
       "text": "Empezar material R4 + Q8+Q9 (entrega: 22 may)",
       "order": 1,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80582/assignments/858885"
     },
     {
       "weekNum": 12,
       "course": "Prob",
       "text": "Hacer PEC5: cuestionario + parte R (abre 6 may, entrega: 12 may)",
       "order": 2,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/76567/assignments/862665"
     },
     {
       "weekNum": 12,
       "course": "Prog",
       "text": "Continuar PAC3 (entrega: 15 may)",
       "order": 3,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/81156/assignments/867706"
     },
     {
       "weekNum": 12,
       "course": "Redes",
       "text": "Continuar PEC3 Redes (entrega: 15 may)",
       "order": 4,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80216/assignments/850060"
     },
     {
       "weekNum": 12,
@@ -575,56 +631,64 @@
       "course": "AL",
       "text": "Continuar preparacion R4 + Q8+Q9",
       "order": 0,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80582/assignments/858911"
     },
     {
       "weekNum": 13,
       "course": "Prob",
       "text": "Entregar PEC5 el 12 may",
       "order": 1,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/76567/assignments/821544"
     },
     {
       "weekNum": 13,
       "course": "Prob",
       "text": "Empezar PEC6: cuestionario + parte R + video (abre 13 may, entrega: 26 may, R min 80%)",
       "order": 2,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/76567/assignments/862668"
     },
     {
       "weekNum": 13,
       "course": "Prog",
       "text": "Entregar PAC3 el 15 may",
       "order": 3,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/81156/assignments/867706"
     },
     {
       "weekNum": 13,
       "course": "Redes",
       "text": "Entregar PEC3 Redes el 15 may",
       "order": 4,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80216/assignments/850060"
     },
     {
       "weekNum": 13,
       "course": "Redes",
       "text": "Empezar PEC4 Redes (20 pts, abre 16 may, entrega: 12 jun)",
       "order": 5,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80216/assignments/850065"
     },
     {
       "weekNum": 14,
       "course": "AL",
       "text": "Entregar Reto 4 + Q8+Q9 antes del 22 may",
       "order": 0,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80582/assignments/858911"
     },
     {
       "weekNum": 14,
       "course": "Prob",
       "text": "Avanzar en PEC6 (incluye video!, entrega: 26 may)",
       "order": 1,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/76567/assignments/821547"
     },
     {
       "weekNum": 14,
@@ -638,28 +702,32 @@
       "course": "Redes",
       "text": "Continuar PEC4 Redes (entrega: 12 jun)",
       "order": 3,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80216/assignments/850065"
     },
     {
       "weekNum": 15,
       "course": "AL",
       "text": "Subir Video identidad Reto 4 (abre 29 may, entrega: 1 jun)",
       "order": 0,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80582/assignments/873148"
     },
     {
       "weekNum": 15,
       "course": "AL",
       "text": "Empezar material R5 + Q10+Q11 (entrega: 12 jun)",
       "order": 1,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80582/assignments/858845"
     },
     {
       "weekNum": 15,
       "course": "Prob",
       "text": "Entregar PEC6 el 26 may (requiere video!)",
       "order": 2,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/76567/assignments/826807"
     },
     {
       "weekNum": 15,
@@ -673,70 +741,80 @@
       "course": "Prog",
       "text": "Empezar PEC4 Prog (30 pts, abre 25 may, entrega: 12 jun)",
       "order": 4,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/81156/assignments/867738"
     },
     {
       "weekNum": 15,
       "course": "Redes",
       "text": "Continuar PEC4 Redes (entrega: 12 jun)",
       "order": 5,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80216/assignments/850065"
     },
     {
       "weekNum": 16,
       "course": "AL",
       "text": "Finalizar preparacion R5 + Q10+Q11 (entrega: 12 jun)",
       "order": 0,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80582/assignments/858917"
     },
     {
       "weekNum": 16,
       "course": "Prob",
       "text": "PEC Sintesis: disponible solo 5-7 jun. No perder la ventana!",
       "order": 1,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/76567/assignments/821526"
     },
     {
       "weekNum": 16,
       "course": "Prog",
       "text": "Continuar PEC4 Prog (entrega: 12 jun)",
       "order": 2,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/81156/assignments/867738"
     },
     {
       "weekNum": 16,
       "course": "Redes",
       "text": "Finalizar PEC4 Redes (entrega: 12 jun)",
       "order": 3,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80216/assignments/850065"
     },
     {
       "weekNum": 17,
       "course": "AL",
       "text": "Entregar Reto 5 + Q10+Q11 antes del 12 jun",
       "order": 0,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80582/assignments/858917"
     },
     {
       "weekNum": 17,
       "course": "Prog",
       "text": "Entregar PEC4 Prog el 12 jun",
       "order": 1,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/81156/assignments/867738"
     },
     {
       "weekNum": 17,
       "course": "Redes",
       "text": "Entregar PEC4 Redes el 12 jun",
       "order": 2,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80216/assignments/850065"
     },
     {
       "weekNum": 18,
       "course": "AL",
       "text": "Subir Video identidad Reto 5 (abre 19 jun, entrega: 22 jun)",
       "order": 0,
-      "done": false
+      "done": false,
+      "url": "https://aula.uoc.edu/courses/80582/assignments/873141"
     },
     {
       "weekNum": 18,
@@ -776,161 +854,216 @@
   ],
   "deadlines": [
     {
-      "date": "2026-03-10",
-      "label": "Prob — PEC1 (Cuestionario + Reto)",
+      "date": "2026-02-22",
+      "label": "Prob — Cuestionario inicial",
       "course": "Prob",
       "urgent": false,
       "order": 0
+    },
+    {
+      "date": "2026-03-10",
+      "label": "Prob — PEC1 (Cuestionario + Reto R)",
+      "course": "Prob",
+      "urgent": false,
+      "order": 1
     },
     {
       "date": "2026-03-13",
       "label": "AL — Reto 1 (15 pts) + Q1+Q2+Q3",
       "course": "AL",
       "urgent": false,
-      "order": 1
-    },
-    {
-      "date": "2026-03-20",
-      "label": "Redes — PEC1 (20 pts) + Prog — PEC1 (20 pts)",
-      "course": "Redes",
-      "urgent": false,
       "order": 2
     },
     {
-      "date": "2026-03-23",
-      "label": "AL — Video identidad Reto 1",
-      "course": "AL",
+      "date": "2026-03-20",
+      "label": "Redes — PEC1 (20 pts)",
+      "course": "Redes",
       "urgent": false,
       "order": 3
     },
     {
-      "date": "2026-03-24",
-      "label": "Prob — PEC2 (Cuestionario + Reto)",
-      "course": "Prob",
+      "date": "2026-03-20",
+      "label": "Prog — PEC1 (20 pts)",
+      "course": "Prog",
       "urgent": false,
       "order": 4
+    },
+    {
+      "date": "2026-03-23",
+      "label": "AL — Video identidad Reto 1 (abre 20 mar)",
+      "course": "AL",
+      "urgent": false,
+      "order": 5
+    },
+    {
+      "date": "2026-03-24",
+      "label": "Prob — PEC2 (Cuestionario + Reto R)",
+      "course": "Prob",
+      "urgent": false,
+      "order": 6
     },
     {
       "date": "2026-04-03",
       "label": "AL — Reto 2 (15 pts) + Q4+Q5",
       "course": "AL",
       "urgent": false,
-      "order": 5
+      "order": 7
     },
     {
       "date": "2026-04-07",
-      "label": "Prob — PEC3 (Cuestionario + Reto + Video, min 80%)",
+      "label": "Prob — PEC3 (Cuestionario + Reto R + Video, R min 80%)",
       "course": "Prob",
       "urgent": false,
-      "order": 6
+      "order": 8
     },
     {
       "date": "2026-04-13",
-      "label": "AL — Video identidad Reto 2",
+      "label": "AL — Video identidad Reto 2 (abre 10 abr)",
       "course": "AL",
       "urgent": false,
-      "order": 7
+      "order": 9
     },
     {
       "date": "2026-04-17",
       "label": "Prog — PEC2 (25 pts)",
       "course": "Prog",
       "urgent": false,
-      "order": 8
+      "order": 10
     },
     {
       "date": "2026-04-21",
-      "label": "Prob — PEC4 (Cuestionario + Reto)",
+      "label": "Prob — PEC4 (Cuestionario + Reto R)",
       "course": "Prob",
       "urgent": false,
-      "order": 9
+      "order": 11
     },
     {
       "date": "2026-04-24",
       "label": "Redes — PEC2 (30 pts)",
       "course": "Redes",
       "urgent": false,
-      "order": 10
+      "order": 12
     },
     {
       "date": "2026-05-01",
       "label": "AL — Reto 3 (20 pts) + Q6+Q7",
       "course": "AL",
       "urgent": false,
-      "order": 11
-    },
-    {
-      "date": "2026-05-11",
-      "label": "AL — Video identidad Reto 3",
-      "course": "AL",
-      "urgent": false,
-      "order": 12
-    },
-    {
-      "date": "2026-05-12",
-      "label": "Prob — PEC5 (Cuestionario + Reto)",
-      "course": "Prob",
-      "urgent": false,
       "order": 13
     },
     {
-      "date": "2026-05-15",
-      "label": "Redes — PEC3 (30 pts) + Prog — PAC3 (25 pts)",
-      "course": "Redes",
+      "date": "2026-05-11",
+      "label": "AL — Video identidad Reto 3 (abre 8 may)",
+      "course": "AL",
       "urgent": false,
       "order": 14
+    },
+    {
+      "date": "2026-05-12",
+      "label": "Prob — PEC5 (Cuestionario + Reto R)",
+      "course": "Prob",
+      "urgent": false,
+      "order": 15
+    },
+    {
+      "date": "2026-05-15",
+      "label": "Redes — PEC3 (30 pts)",
+      "course": "Redes",
+      "urgent": false,
+      "order": 16
+    },
+    {
+      "date": "2026-05-15",
+      "label": "Prog — PAC3 (25 pts)",
+      "course": "Prog",
+      "urgent": false,
+      "order": 17
     },
     {
       "date": "2026-05-22",
       "label": "AL — Reto 4 (20 pts) + Q8+Q9",
       "course": "AL",
       "urgent": false,
-      "order": 15
+      "order": 18
     },
     {
       "date": "2026-05-26",
-      "label": "Prob — PEC6 (Cuestionario + Reto + Video, min 80%)",
+      "label": "Prob — PEC6 (Cuestionario + Reto R + Video, R min 80%)",
       "course": "Prob",
       "urgent": false,
-      "order": 16
+      "order": 19
     },
     {
       "date": "2026-06-01",
-      "label": "AL — Video identidad Reto 4",
+      "label": "AL — Video identidad Reto 4 (abre 29 may)",
       "course": "AL",
       "urgent": false,
-      "order": 17
+      "order": 20
     },
     {
       "date": "2026-06-07",
       "label": "Prob — PEC Sintesis (SOLO 2 dias: Jun 5-7)",
       "course": "Prob",
       "urgent": true,
-      "order": 18
+      "order": 21
     },
     {
       "date": "2026-06-12",
-      "label": "AL — Reto 5 + Q10+Q11 + Redes PEC4 + Prog PEC4",
+      "label": "AL — Reto 5 + Q10+Q11",
       "course": "AL",
       "urgent": false,
-      "order": 19
+      "order": 22
+    },
+    {
+      "date": "2026-06-12",
+      "label": "Redes — PEC4 (20 pts)",
+      "course": "Redes",
+      "urgent": false,
+      "order": 23
+    },
+    {
+      "date": "2026-06-12",
+      "label": "Prog — PEC4 (30 pts)",
+      "course": "Prog",
+      "urgent": false,
+      "order": 24
     },
     {
       "date": "2026-06-22",
-      "label": "AL — Video identidad Reto 5",
+      "label": "AL — Video identidad Reto 5 (abre 19 jun)",
       "course": "AL",
       "urgent": false,
-      "order": 20
+      "order": 25
     }
   ],
   "notes": [
     {
-      "taskId": "task_1",
+      "taskId": "task_3",
       "text": "Recordar revisar los apuntes del profesor antes de hacer el cuestionario."
     },
     {
-      "taskId": "task_5",
+      "taskId": "task_1",
       "text": "Instalar la ultima version de RStudio."
+    },
+    {
+      "taskId": "task_29",
+      "text": "Los videos de AL (R1-R5) tienen ventana de solo 4 dias. Fechas de apertura: 20 mar, 10 abr, 8 may, 29 may, 19 jun."
+    },
+    {
+      "taskId": "task_89",
+      "text": "Prob PEC Sintesis: ventana de solo 2 dias (5-7 jun). Preparar el material con antelacion en la semana 16."
+    },
+    {
+      "taskId": "task_41",
+      "text": "Semana Santa 2026: del 29 mar al 5 abr. La entrega de AL R2+Q4+Q5 vence el 3 abr — entregar antes de vacaciones."
+    },
+    {
+      "taskId": "task_38",
+      "text": "Prob PEC3 y PEC6 incluyen video ademas de cuestionario y parte R. Grabar con dias de antelacion."
+    },
+    {
+      "taskId": "task_73",
+      "text": "Semana 13 (12-18 may): triple entrega — Prob PEC5 + Redes PEC3 + Prog PAC3. La semana mas cargada del semestre."
     }
   ]
 }
